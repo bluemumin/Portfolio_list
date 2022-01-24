@@ -10,7 +10,7 @@ Portfolio_list
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 사내 경진대회 데이터 제공[Wavve] </p>
+		- 사내 경진대회 데이터 제공[Wavve](데이터 외부 유출 금지로 미 업로드 및 관련 결과 삭제) </p>
 	<p>(2). Data Preprocessing <br/>
 		- EDA (지점데이터 + 고객데이터 + 외부데이터) <br/>
 		- Reduction (특성이 다른 지점 데이터  제거, missing value 포함한 고객데이터 제거)</p>
@@ -26,7 +26,7 @@ Portfolio_list
 		- Futher Research : 바뀌는 금융환경 ---> 모델링 반복 필요<br/>
 		&nbsp;: 통폐합이 영향을 준 고객만을 대상으로 분석 모델을 구축해야 한다
 		
-*보러가기: [wavve 재구독 여부 분류](https://github.com/bluemumin/wavve-subscription-exit-rate)*
+*보러가기: [wavve 재구독 여부 분류](https://github.com/bluemumin/wavve_subscription_exit_rate)*
 		
 ***
 <h2>[#2. Competition - 약물 독성 분류] </h2> 
@@ -36,7 +36,7 @@ Portfolio_list
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 사내 경진대회 데이터 제공[SK바이오팜] </p>
+		- 사내 경진대회 데이터 제공[SK바이오팜](데이터 외부 유출 금지로 미 업로드 및 관련 결과 삭제) </p>
 	<p>(2). Data Preprocessing <br/>
 		- EDA (지점데이터 + 고객데이터 + 외부데이터) <br/>
 		- Reduction (특성이 다른 지점 데이터  제거, missing value 포함한 고객데이터 제거)</p>
