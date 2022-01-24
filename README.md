@@ -10,7 +10,7 @@ Portfolio_list
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등)[스탯티즈](http://www.statiz.co.kr/main.php)</p>
+		- 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등) </p> [스탯티즈](http://www.statiz.co.kr/main.php)
 	<p>(2). Data Preprocessing <br/>
 		- EDA (지점데이터 + 고객데이터 + 외부데이터) <br/>
 		- Reduction (특성이 다른 지점 데이터  제거, missing value 포함한 고객데이터 제거)</p>
