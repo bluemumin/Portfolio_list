@@ -136,4 +136,4 @@ Portfolio_list
 		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득 <br/>
 		- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)<p/>
 		
-*보러가기: [와인 품질 분류](https://github.com/bluemumin/baf_kaggle_wine_project_end)*
+*보러가기: [와인 품질 분류](https://github.com/bluemumin/baf_kaggle_wine_project)*
