@@ -126,7 +126,7 @@ Portfolio_list
 		- 레드 와인 성분 + 와인 품질 [kaggle] </p>
 	<p>(2). Data Preprocessing <br/>
 		- EDA (독립변수 correlation plot, histogram, boxplot) <br/>
-	        - binarization(와인품질 3~8점 / 5점 이하 -> low rank, 6점 이상 -> high rank)
+	        - binarization(와인품질 3~8점 / 5점 이하 -> low rank, 6점 이상 -> high rank) <br/>
 		- Reduction (EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거)</p>
 	<p>(3). Model & Algorithms <br/>
 		- Logistic Regression, RandomForest, LightGBM <br/>
