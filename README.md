@@ -89,28 +89,30 @@ Portfolio_list
 ***
 <h2>[#4. Toy Project - 텔레마케팅 정기예금 가입 여부 분류] </h2> 
 
+- 사용언어 / 핵심 라이브러리
+ <p> SAS, R / ggplot2, dplyr 등 </p>
+
 - Background 
  <p> 텔레마케팅 성과 확인 및 개선을 위해, 고객 개인정보 및 전화 시간등을 활용하여 신규 정기예금의 가입 여부를 분류</p>
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등) [스탯티즈] </p>
+		- 포르투갈 은행 텔레 마케팅 성과 자료 [kaggle] </p>
 	<p>(2). Data Preprocessing <br/>
-		- EDA (지점데이터 + 고객데이터 + 외부데이터) <br/>
-		- Reduction (특성이 다른 지점 데이터  제거, missing value 포함한 고객데이터 제거)</p>
+		- EDA (고객 개인 정보, 텔레마케팅 기록,) <br/>
+		- 시각화 (독립변수 & 반응변수 누적 바 그래프, 핵심변수 histogram, boxplot   ) <br/>
+		- 변수 변형 (나이 -> 나이대 그룹화, 직업군 통일화, date 정보 분리) <br/>
+		- Reduction (과도한 은행 잔고, 비정상적 개인정보 제거) </p>
 	<p>(3). Model & Algorithms <br/>
-		- xgboost regression(지점 데이터) --> RMSE 작을 때 feature importance <br/>
-		- xgboost classifier(고객 데이터) --> F1 높을 때 feature importance<br/>
-		- Aggregation(고객데이터 --> 지점데이터) --> Clustering(Hierarchical, K-means, Gaussian mixture)</p>
-	<p>(4). Report <br/>
-		- 이탈에 영향을 주는 변수 목록 작성
-		- 변수 특성이 비슷한 지점끼리 클러스터링한 결과 표 작성
-	<p>(5). Review <br/>
-		- 피드백 : 클러스터링보다 나은 방법이 있지 않았을까<br/>
-		- Futher Research : 바뀌는 금융환경 ---> 모델링 반복 필요<br/>
-		&nbsp;: 통폐합이 영향을 준 고객만을 대상으로 분석 모델을 구축해야 한다
+		- 이전 캠페인 참여/비참여에 따른 신규 참여율 많이 다름 --> 해당 변수 기준, 데이터 분리 후 모델 2개 생성 <br/>
+		- 반응변수 불균형 --> 모델링 과정에서 데이터 비율별 가중치 별도 부여 <br/>
+		- 로지스틱 회귀분석 --> 정확도 계산(이전 참여 : 73%, 이전 미 참여 : 64퍼) </p>
+	<p>(4). Report & Review <br/>
+		- 이전 캠페인 참여 여부 & 신규 정기예금 가입 여부 상관성 확인 후, 데이터 분리 --> 향상된 분류 모델 구축 <br/>
+		- 다양한 시각화와 변수 변형을 통해서 Reduction 되어야될 데이터 확인 후 제거 <br/>
+		- 피드백 : 데이터 불균형인 상황에서 최적의 threshold 찾는 과정 없이 단순 0.5로 수행 </p>
 		
-*보러가기: [텔레마케팅 통한 정기예금 가입 여부 분류](https://github.com/bluemumin/data_mining_telephone_marketing_with_R)*
+*보러가기: [텔레마케팅 통한 정기예금 가입 여부 분류](https://github.com/bluemumin/telemarketing_to_deposit_with_R)*
 		
 ***
 <h2>[#5. Toy Project - 와인 품질 분류] </h2> 
