@@ -115,25 +115,25 @@ Portfolio_list
 ***
 <h2>[#5. Toy Project - 와인 품질 분류] </h2> 
 
+- 사용언어 / 핵심 라이브러리
+ <p> python / Pandas, matplotlib, seaborn, sklearn, LightGBM  </p>
+
 - Background 
  <p> 와인 생산 중 더 좋은 품질의 와인을 생산하기 위해, 와인 성분 데이터로 와인의 품질 점수를 분류함</p>
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등) [스탯티즈] </p>
+		- 레드 와인 성분 + 와인 품질 [kaggle] </p>
 	<p>(2). Data Preprocessing <br/>
-		- EDA (지점데이터 + 고객데이터 + 외부데이터) <br/>
-		- Reduction (특성이 다른 지점 데이터  제거, missing value 포함한 고객데이터 제거)</p>
+		- EDA (독립변수 correlation plot, histogram, boxplot) <br/>
+	        - binarization(와인품질 3~8점 / 5점 이하 -> low rank, 6점 이상 -> high rank)
+		- Reduction (EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거)</p>
 	<p>(3). Model & Algorithms <br/>
-		- xgboost regression(지점 데이터) --> RMSE 작을 때 feature importance <br/>
-		- xgboost classifier(고객 데이터) --> F1 높을 때 feature importance<br/>
-		- Aggregation(고객데이터 --> 지점데이터) --> Clustering(Hierarchical, K-means, Gaussian mixture)</p>
-	<p>(4). Report <br/>
-		- 이탈에 영향을 주는 변수 목록 작성
-		- 변수 특성이 비슷한 지점끼리 클러스터링한 결과 표 작성
-	<p>(5). Review <br/>
-		- 피드백 : 클러스터링보다 나은 방법이 있지 않았을까<br/>
-		- Futher Research : 바뀌는 금융환경 ---> 모델링 반복 필요<br/>
-		&nbsp;: 통폐합이 영향을 준 고객만을 대상으로 분석 모델을 구축해야 한다
+		- Logistic Regression, RandomForest, LightGBM <br/>
+		  --> 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 </p>
+	<p>(4). Report & Review <br/>
+		- 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 <br/>
+		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득 <br/>
+		- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)<p/>
 		
 *보러가기: [와인 품질 분류](https://github.com/bluemumin/baf_kaggle_wine_project_end)*
