@@ -5,6 +5,9 @@ Portfolio_list
 ***
 <h2>[#1. Competition - wavve 재구독 여부 분류] </h2> 
 
+- 사용언어 / 핵심 라이브러리
+ <p> python(3.8) / Pandas, LightGBM </p>
+
 - Background 
  <p> wavve 신규 구독자의 3주간 시청 기록 활용, 1개월 뒤 재구독 여부를 사전 분류함.(이후 이탈 방지 혜택 부여) </p>
 
@@ -18,7 +21,7 @@ Portfolio_list
 		- Reduction (유저별 과도한 컨텐츠 시청 수, 최신 컨텐츠 과다 시청 수 절삭)</p>
 	<p>(3). Model & Algorithms <br/>
 		- LightGBM 1차, 2차 수행 --> 최적의 parameter 확인(gridsearch + 5-fold) --> 최적의 threshold 확인(5-fold)  <br/>
-		- Xgboost, Randomforest 모델링 후, ensemble 수행 --> 결과 차이 x로 최종 제외 <br/>
+		- Xgboost, Randomforest 모델링 후, ensemble 수행 --> 예측률 저하로 최종 제외 <br/>
 	<p>(4). Report <br/>
 		- LightGBM 결과 기반, 재구독 여부에 효과적인 변수 list 작성 <br/>
 	        - 최종 등수 27/248(팀) 기록 (1등과 f1-score 0.01 차이) <br/>
