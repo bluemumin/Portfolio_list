@@ -14,20 +14,20 @@ Portfolio_list
 	<p>(2). Data Preprocessing <br/>
 		- EDA (고객 결제 사항 + 시청 기록 데이터) <br/>
 	        - 변수 내 항목 간소화 (결제 코드, 결제 등록 기기, 컨텐츠별 시청 기기) <br/>
-		- 파생변수 생성 (유저 평균 시청 시간 퍼센트 산출, 최신 컨텐츠 시청 여부 그룹화, 결제 후 마지막 시청 일자 갭) <br/>
+		- 파생변수 생성 (최신 컨텐츠 시청 기간 그룹화, 유저 컨텐츠 시청 퍼센트, 결제 후, 마지막 시청일자 gap 계산) <br/>
 		- Reduction (유저별 과도한 컨텐츠 시청 수, 최신 컨텐츠 과다 시청 수 절삭)</p>
 	<p>(3). Model & Algorithms <br/>
-		- LightGBM 1차 수행 ---> 최적의 parameter 확인(gridsearch + 5-fold)  <br/>
-		- LightGBM 2차 수행 ---> 최적의 paramter 확인 이후, 최적의 threshold 확인(5-fold) </p>
+		- LightGBM 1차, 2차 수행 --> 최적의 parameter 확인(gridsearch + 5-fold) --> 최적의 threshold 확인(5-fold)  <br/>
+		- Xgboost, Randomforest 모델링 후, ensemble 수행 --> 결과 차이 x로 최종 제외 <br/>
 	<p>(4). Report <br/>
 		- LightGBM 결과 기반, 재구독 여부에 효과적인 변수 list 작성 <br/>
-	        - 27/248등 기록(1등과 f1-score 0.01 차이) <br/>
+	        - 최종 등수 27/248(팀) 기록 (1등과 f1-score 0.01 차이) <br/>
 		- 두 평가 기준인 f1-score와 accuracy의 차이가 없는 균형적 모델 작성</p>
 	<p>(5). Review <br/>
-		- 긍정적 사항 : 유저의 정상적 시청 여부를 컨텐츠 길이 대비 시청 시간으로 퍼센트화 한것이 효과적이었음 <br/>
-	        - 피드백 : 결제 후, 마지막 시청일자 gap보다, 주차별 시청 시간의 증가/감소 여부가 더 효과적임을 예상함 <br/>
+		- 긍정적 사항 : 유저의 컨텐츠 시청 퍼센트(시청 시간/컨텐츠 길이) 파생 변수가 모델 개선에 효과적 <br/>
+	        - 피드백 : 결제 후, 마지막 시청일자 gap보다, 1주차별 시청 시간의 증가/감소 여부가 더 효과적임을 예상함 <br/>
 		- Futher Research : 해당 주차 드라마/영화 순위(외부 데이터) 활용한 인기 콘텐츠 선호도, <br/>
-				    wavve내 영화 추가 구매 여부, 코인 추가 거래 내역 등 플랫폼 적극적 이용 수치 인사이트 개발 가능 예상 </p>
+		&nbsp;+ (wavve내 영화 추가 구매 여부, 코인 추가 거래 내역 등) 플랫폼 적극적 이용 수치 인사이트 개발 가능 예상 </p>
 		
 *보러가기: [wavve 재구독 여부 분류](https://github.com/bluemumin/wavve_subscription_exit_rate)*
 		
