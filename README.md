@@ -85,7 +85,7 @@ Portfolio_list
 	<p>(5). Review <br/>
 		- 피드백 : 직전 시즌 기록만이 아닌 더 이전 시즌의 기록, 누적 성적들도 활용 가능 예상함<br/>
 		- Futher Research : 이전 기록이 없는 신규 타자 --> 고등,대학 리그의 데이터로 추가 모델 구현<br/>
-		- 모델링 18/93위 기록, 시각화 1등 기록 [인증 링크](https://dacon.io/competitions/official/235546/leaderboard/) 
+		- 모델링 18/93위 기록, 시각화 1등 기록 <br/>
 		&nbsp;+ 스탯티즈 사이트 개편시, 크롤링 코드가 중단이 되므로, 코드 재활용시 개선 작업 필요 </p>
 		
 *보러가기: [야구 타자 OPS 예측](https://github.com/bluemumin/baseball_ops_predict)*
