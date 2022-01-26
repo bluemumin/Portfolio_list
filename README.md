@@ -70,23 +70,25 @@ Portfolio_list
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등) [스탯티즈] </p>
+		- 현역 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등) [스탯티즈] </p>
 	<p>(2). Data Preprocessing <br/>
-		- EDA (지점데이터 + 고객데이터 + 외부데이터) <br/>
-		- Reduction (특성이 다른 지점 데이터  제거, missing value 포함한 고객데이터 제거)</p>
+		- EDA (변수간 heatmap & 반응변수와의 barplot, boxplot & barplot, histogram & dot graph) <br/>
+		- 목적, 파생변수 생성 (다음 시즌 OPS --> 반응변수 / 행운의 안타, 타자 속도 계수, 평균대비 기여율, 공 반발계수, 누적 연차 등)<br/>
+		- Reduction & 변수 그룹화 (작은 타석수로 과도 or 과소로 나온 값 절단, 타석 위치 & 포지션 통합)</p>
 	<p>(3). Model & Algorithms <br/>
-		- xgboost regression(지점 데이터) --> RMSE 작을 때 feature importance <br/>
-		- xgboost classifier(고객 데이터) --> F1 높을 때 feature importance<br/>
-		- Aggregation(고객데이터 --> 지점데이터) --> Clustering(Hierarchical, K-means, Gaussian mixture)</p>
+		- RandomForestRegressor --> GridSearch 사용 후 MAE 계산 <br/>
+		- xgboost Regressor, Linear Regression --> parameter 미설정 후, 메인 모델링 비교용으로 활용<br/>
+		- 이전 2개년 결과 --> 누적 데이터 감소에 따른 영향 확인 및, 연도별 MAE 일정 여부 확인 </p>
 	<p>(4). Report <br/>
-		- 이탈에 영향을 주는 변수 목록 작성
-		- 변수 특성이 비슷한 지점끼리 클러스터링한 결과 표 작성
+		- 평균 MAE 0.09로 타자의 OPS 성적을 1할 미만의 값으로 예측하는 모델 구현 완료 (cf 최저/고 범위 0.55~1.1) <br/>
+		- 다음 시즌의 타자 성적 예측 목표를 두고 데이터 크롤링, EDA, 모델링까지 전체 process 구현 완료 </p>
 	<p>(5). Review <br/>
-		- 피드백 : 클러스터링보다 나은 방법이 있지 않았을까<br/>
-		- Futher Research : 바뀌는 금융환경 ---> 모델링 반복 필요<br/>
-		&nbsp;: 통폐합이 영향을 준 고객만을 대상으로 분석 모델을 구축해야 한다
+		- 피드백 : 직전 시즌 기록만이 아닌 더 이전 시즌의 기록, 누적 성적들도 활용 가능 예상함<br/>
+		- Futher Research : 이전 기록이 없는 신규 타자 --> 고등,대학 리그의 데이터로 추가 모델 구현<br/>
+		- 모델링 18/93위 기록, 시각화 1등 기록 [인증 링크](https://dacon.io/competitions/official/235546/leaderboard/) 
+		&nbsp;+ 스탯티즈 사이트 개편시, 크롤링 코드가 중단이 되므로, 코드 재활용시 개선 작업 필요 </p>
 		
-*보러가기: [야구 타자 OPS 예측](https://github.com/bluemumin/dongguk_university_graduate_report_baseball_OPS_end)*
+*보러가기: [야구 타자 OPS 예측](https://github.com/bluemumin/baseball_ops_predict)*
 		
 ***
 <h2>[#4. Toy Project - 텔레마케팅 정기예금 가입 여부 분류] </h2> 
@@ -127,6 +129,35 @@ Portfolio_list
 
 - Background 
  <p> 와인 생산 중 더 좋은 품질의 와인을 생산하기 위해, 와인 성분 데이터로 와인의 품질 점수를 분류함</p>
+
+- Summary
+	<p>(1). Data Collection <br/>
+		- 레드 와인 성분 + 와인 품질 [kaggle] </p>
+	<p>(2). Data Preprocessing <br/>
+		- EDA (독립변수 correlation plot, histogram, boxplot) <br/>
+	        - binarization(와인품질 3~8점 / 5점 이하 -> low rank, 6점 이상 -> high rank) <br/>
+		- Reduction (EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거)</p>
+	<p>(3). Model & Algorithms <br/>
+		- Logistic Regression, RandomForest, LightGBM <br/>
+		  --> 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 </p>
+	<p>(4). Report & Review <br/>
+		- 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 <br/>
+		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득 <br/>
+		- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)<p/>
+		
+*보러가기: [와인 품질 분류](https://github.com/bluemumin/baf_kaggle_wine_project)*
+
+***
+<h2>[#6. Toy Project - 배달 통화 건수 데이터 활용, 신규 창업 추천] </h2> 
+
+- 참여 항목
+ <p> 김경록(R, SAS 코드 작성 및 보고서 작성), 팀원(ppt 제작, 파생변수 아이디어 제공) </p>
+
+- 사용언어 / 핵심 라이브러리
+ <p> python / Pandas, matplotlib, seaborn, sklearn, LightGBM  </p>
+
+- Background 
+ <p> 지역, 배달 주문 통화 건수 데이터를 활용한, 신규 창업시 최적의 업종, busy time, 휴무일 컨설팅 모델 구축</p>
 
 - Summary
 	<p>(1). Data Collection <br/>
