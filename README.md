@@ -5,17 +5,17 @@ Portfolio_list
 (참여항목이 없을 경우, 전체 단독 제작 입니다.)
 
 ***
-<h2>[#1. Competition - wavve 재구독 여부 분류] </h2> 
+<h2>[#1. Competition - ott 재구독 여부 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리
  <p> python(3.8) / Pandas, LightGBM </p>
 
 - Background 
- <p> wavve 신규 구독자의 3주간 시청 기록 활용, 1개월 뒤 재구독 여부를 사전 분류함.(이후 이탈 방지 혜택 부여) </p>
+ <p> ott 신규 구독자의 3주간 시청 기록 활용, 1개월 뒤 재구독 여부를 사전 분류함.(이후 이탈 방지 혜택 부여) </p>
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 그룹사 경진대회 데이터 제공[Wavve](데이터 외부 유출 금지로 미 업로드 및 관련 결과 삭제) </p>
+		- 그룹사 경진대회 데이터 제공[OTT 서비스 중 하나](데이터 외부 유출 금지로 미 업로드 및 관련 결과 삭제) </p>
 	<p>(2). Data Preprocessing <br/>
 		- EDA (고객 결제 사항 + 시청 기록 데이터) <br/>
 	        - 변수 내 항목 간소화 (결제 코드, 결제 등록 기기, 컨텐츠별 시청 기기) <br/>
@@ -32,33 +32,35 @@ Portfolio_list
 		- 긍정적 사항 : 유저의 컨텐츠 시청 퍼센트(시청 시간/컨텐츠 길이) 파생 변수가 모델 개선에 효과적 <br/>
 	        - 피드백 : 결제 후, 마지막 시청일자 gap보다, 1주차별 시청 시간의 증가/감소 여부가 더 효과적임을 예상함 <br/>
 		- Futher Research : 해당 주차 드라마/영화 순위(외부 데이터) 활용한 인기 콘텐츠 선호도, <br/>
-		&nbsp;+ (wavve내 영화 추가 구매 여부, 코인 추가 거래 내역 등) 플랫폼 적극적 이용 수치 인사이트 개발 가능 예상 </p>
+		&nbsp;+ (ott내 영화 추가 구매 여부, 코인 추가 거래 내역 등) 플랫폼 적극적 이용 수치 인사이트 개발 가능 예상 </p>
 		
-*보러가기: [wavve 재구독 여부 분류](https://github.com/bluemumin/wavve_subscription_exit_rate)*
+*보러가기: [ott 재구독 여부 분류](https://github.com/bluemumin/ott_subscription_exit_rate)*
 		
 ***
 <h2>[#2. Competition - 약물 독성 분류] </h2> 
+
+- 사용언어 / 핵심 라이브러리
+ <p> python / Pandas, rdkit(분자구조 변환 라이브러리), LightGBM, sklearn </p>
 
 - Background 
  <p> 신규 약 개발 시, 다양한 시물레이션 실행 및 비용 감축을 위해, 약물 분자 구조 약칭 데이터로 약물의 독성 여부 분류함 </p>
 
 - Summary
 	<p>(1). Data Collection <br/>
-		- 사내 경진대회 데이터 제공[SK바이오팜](데이터 외부 유출 금지로 미 업로드 및 관련 결과 삭제) </p>
+		- 사내 경진대회 데이터 제공[의약 데이터](데이터 외부 유출 금지로 미 업로드 및 관련 결과 삭제) </p>
 	<p>(2). Data Preprocessing <br/>
-		- EDA (지점데이터 + 고객데이터 + 외부데이터) <br/>
-		- Reduction (특성이 다른 지점 데이터  제거, missing value 포함한 고객데이터 제거)</p>
+		- 데이터 도메인 공부 (SMILES CODE 공부, 분자구조 벡터화 방식, 약물 성분 컬럼 내용) <br/>
+		- 파생변수 추가(분자 구조 벡터화 방식 2종 추가, rdkit 라이브러리 활용 변수 추가)</p>
 	<p>(3). Model & Algorithms <br/>
-		- xgboost regression(지점 데이터) --> RMSE 작을 때 feature importance <br/>
-		- xgboost classifier(고객 데이터) --> F1 높을 때 feature importance<br/>
-		- Aggregation(고객데이터 --> 지점데이터) --> Clustering(Hierarchical, K-means, Gaussian mixture)</p>
+		- LightGBM --> 10-fold + parameter 추가 설정 <br/>
+		- 모델 성능 검증 --> binary cross entropy 대신 f1_score 함수 구현 후 LightGBM 성능 개선에 사용<p/>
 	<p>(4). Report <br/>
-		- 이탈에 영향을 주는 변수 목록 작성
-		- 변수 특성이 비슷한 지점끼리 클러스터링한 결과 표 작성
+		- 최대한 단순한 구조로, 앙상블을 사용한 다른 수상작들과 f1_score가 차이 없는 모델 구현 <br/>
+		- 관련 도메인 없는 데이터임에도, 충분한 리서치 후, 관련 라이브러리를 활용하여 파생 변수 생성 <p/>
 	<p>(5). Review <br/>
-		- 피드백 : 클러스터링보다 나은 방법이 있지 않았을까<br/>
-		- Futher Research : 바뀌는 금융환경 ---> 모델링 반복 필요<br/>
-		&nbsp;: 통폐합이 영향을 준 고객만을 대상으로 분석 모델을 구축해야 한다
+		- 피드백 : 데이터 부족으로 overfitting 상태를 대회 마지막까지 충분하게 극복 실패함 <br/>
+		- Futher Research : 의약 관련 도메인 추가 습득시, 모델에 더 효과적인 파생변수 생성 가능<br/>
+		- 사내 경진대회 2등 수상 <p/>
 		
 *보러가기: [약물 독성 분류](https://github.com/bluemumin/smiles_toxicity)*
 		
@@ -132,35 +134,6 @@ Portfolio_list
 
 - Background 
  <p> 와인 생산 중 더 좋은 품질의 와인을 생산하기 위해, 와인 성분 데이터로 와인의 품질 점수를 분류함</p>
-
-- Summary
-	<p>(1). Data Collection <br/>
-		- 레드 와인 성분 + 와인 품질 [kaggle] </p>
-	<p>(2). Data Preprocessing <br/>
-		- EDA (독립변수 correlation plot, histogram, boxplot) <br/>
-	        - binarization(와인품질 3~8점 / 5점 이하 -> low rank, 6점 이상 -> high rank) <br/>
-		- Reduction (EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거)</p>
-	<p>(3). Model & Algorithms <br/>
-		- Logistic Regression, RandomForest, LightGBM <br/>
-		  --> 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 </p>
-	<p>(4). Report & Review <br/>
-		- 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 <br/>
-		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득 <br/>
-		- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)<p/>
-		
-*보러가기: [와인 품질 분류](https://github.com/bluemumin/baf_kaggle_wine_project)*
-
-***
-<h2>[#6. Toy Project - 배달 통화 건수 데이터 활용, 신규 창업 추천] </h2> 
-
-- 참여 항목
- <p> 김경록(R, SAS 코드 작성 및 보고서 작성), 팀원(ppt 제작, 파생변수 아이디어 제공) </p>
-
-- 사용언어 / 핵심 라이브러리
- <p> python / Pandas, matplotlib, seaborn, sklearn, LightGBM  </p>
-
-- Background 
- <p> 지역, 배달 주문 통화 건수 데이터를 활용한, 신규 창업시 최적의 업종, busy time, 휴무일 컨설팅 모델 구축</p>
 
 - Summary
 	<p>(1). Data Collection <br/>
