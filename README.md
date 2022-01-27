@@ -96,7 +96,7 @@ Portfolio_list
 *보러가기: [야구 타자 OPS 예측](https://github.com/bluemumin/baseball_ops_predict)*
 		
 ***
-<h2>[#4. Toy Project - 텔레마케팅 정기예금 가입 여부 분류] </h2> 
+<h2>[#4. Toy Project - 텔레마케팅 후, 정기예금 가입 여부 분류] </h2> 
 
 - 참여 항목
  <p> 김경록(R, SAS 코드 작성 및 보고서 작성), 팀원(ppt 제작, 파생변수 아이디어 제공) </p>
@@ -150,4 +150,4 @@ Portfolio_list
 		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득 <br/>
 		- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)<p/>
 		
-*보러가기: [와인 품질 분류](https://github.com/bluemumin/baf_kaggle_wine_project)*
+*보러가기: [와인 품질 분류](https://github.com/bluemumin/wine_quality_classfication)*
