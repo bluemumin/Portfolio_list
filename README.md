@@ -8,7 +8,7 @@ Portfolio_list
 <h2>[#1. Competition - ott 재구독 여부 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리
- <p> python(3.8) / Pandas, LightGBM </p>
+ <p> Python(3.8) / Pandas, LightGBM </p>
 
 - Background 
  <p> ott 신규 구독자의 3주간 시청 기록 활용, 1개월 뒤 재구독 여부를 사전 분류함.(이후 이탈 방지 혜택 부여) </p>
@@ -40,7 +40,7 @@ Portfolio_list
 <h2>[#2. Competition - 약물 독성 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리
- <p> python / Pandas, rdkit(분자구조 변환 라이브러리), LightGBM, sklearn </p>
+ <p> Python / Pandas, rdkit(분자구조 변환 라이브러리), LightGBM, sklearn </p>
 
 - Background 
  <p> 신규 약 개발 시, 다양한 시물레이션 실행 및 비용 감축을 위해, 약물 분자 구조 약칭 데이터로 약물의 독성 여부 분류함 </p>
@@ -68,7 +68,7 @@ Portfolio_list
 <h2>[#3. Competition, Toy project - 야구 타자 OPS 예측] </h2> 
 
 - 사용언어 / 핵심 라이브러리
- <p> python / Pandas, matplotlib, seaborn, plotly, BeautifulSoup, sklearn </p>
+ <p> Python / Pandas, matplotlib, seaborn, plotly, BeautifulSoup, sklearn </p>
 
 - Background 
  <p> 현 시즌 타자 성적 기반, 다음 시즌의 타자들의 OPS(타자의 대표적 타격 지표) 성적 예측 </p>
@@ -130,7 +130,7 @@ Portfolio_list
 <h2>[#5. Toy Project - 와인 품질 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리
- <p> python / Pandas, matplotlib, seaborn, sklearn, LightGBM  </p>
+ <p> Python / Pandas, matplotlib, seaborn, sklearn, LightGBM  </p>
 
 - Background 
  <p> 와인 생산 중 더 좋은 품질의 와인을 생산하기 위해, 와인 성분 데이터로 와인의 품질 점수를 분류함</p>
