@@ -11,11 +11,15 @@ Portfolio_list
 
 	- Python(3.8) / Pandas, LightGBM
 
+<br/>
+
 - 목적 & 데이터 수집(제공)
 
 	- 목적 : OTT 플랫폼의 신규 구독자의 3주간 시청 기록 활용, 가입 후 1개월 뒤 재구독 여부를 사전 분류함.
 
 	- 데이터 : [그룹사 경진대회 데이터 제공] (데이터 외부 유출 금지 -> 미 업로드, 관련 결과 삭제)
+
+<br/>
 
 - Summary
 
@@ -48,7 +52,9 @@ Portfolio_list
 	  + (ott내 영화 추가 구매 여부, 코인 추가 거래 내역 등) 플랫폼 적극적 이용 수치 인사이트 개발 가능 예상
 			
 *보러가기: [ott 재구독 여부 분류](https://github.com/bluemumin/ott_subscription_exit_rate)*
-		
+
+<br/>
+
 ***
 <h2>[#2. Competition - 약물 독성 분류] </h2> 
 
