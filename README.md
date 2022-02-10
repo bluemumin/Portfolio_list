@@ -177,29 +177,29 @@ Portfolio_list
 
 <br/>
 
-	(a). Data Preprocessing
-	
-		- EDA : 고객 개인 정보, 텔레마케팅 기록
-		
-		- 시각화 : 독립변수 & 반응변수 누적 바 그래프, 핵심변수 histogram, boxplot
-		
-		- Data Reduction & 변수 그룹화 : 과도한 은행 잔고, 비정상적 개인정보 제거 / 나이 -> 나이대 그룹화, 직업군 통일화, date 정보 분리
-		
-	(b). Model & Algorithms
-	
-		- 이전 캠페인 참여/비참여에 따른 신규 참여율 많이 다름 --> 해당 변수 기준, 데이터 분리 후 모델 2개 생성
-		
-		- 반응변수 불균형 --> 모델링 과정에서 데이터 비율별 가중치 별도 부여
-		
-		- 로지스틱 회귀분석 --> 정확도 계산(이전 참여 : 73%, 이전 미 참여 : 64퍼)
-		
-	(c). Report & Review
-	
-		- 이전 캠페인 참여 여부 & 신규 정기예금 가입 여부 상관성 확인 후, 데이터 분리 --> 향상된 분류 모델 구축
-		
-		- 다양한 시각화와 변수 변형을 통해서 Reduction 되어야될 데이터 확인 후 제거
-		
-		- 피드백 : 데이터 불균형인 상황에서 최적의 threshold 찾는 과정 없이 단순 0.5로 수행
+(a). Data Preprocessing
+
+	- EDA : 고객 개인 정보, 텔레마케팅 기록
+
+	- 시각화 : 독립변수 & 반응변수 누적 바 그래프, 핵심변수 histogram, boxplot
+
+	- Data Reduction & 변수 그룹화 : 과도한 은행 잔고, 비정상적 개인정보 제거 / 나이 -> 나이대 그룹화, 직업군 통일화, date 정보 분리
+
+(b). Model & Algorithms
+
+	- 이전 캠페인 참여/비참여에 따른 신규 참여율 많이 다름 --> 해당 변수 기준, 데이터 분리 후 모델 2개 생성
+
+	- 반응변수 불균형 --> 모델링 과정에서 데이터 비율별 가중치 별도 부여
+
+	- 로지스틱 회귀분석 --> 정확도 계산(이전 참여 : 73%, 이전 미 참여 : 64퍼)
+
+(c). Report & Review
+
+	- 이전 캠페인 참여 여부 & 신규 정기예금 가입 여부 상관성 확인 후, 데이터 분리 --> 향상된 분류 모델 구축
+
+	- 다양한 시각화와 변수 변형을 통해서 Reduction 되어야될 데이터 확인 후 제거
+
+	- 피드백 : 데이터 불균형인 상황에서 최적의 threshold 찾는 과정 없이 단순 0.5로 수행
 		
 *보러가기: [텔레마케팅 통한 정기예금 가입 여부 분류](https://github.com/bluemumin/telemarketing_to_deposit_with_R)*
 		
@@ -224,26 +224,26 @@ Portfolio_list
 
 <br/>
 
-	(a). Data Preprocessing
-	
-		- EDA (독립변수 correlation plot, histogram, boxplot)
-		
-	        - 반응 변수 그룹화 : (와인품질 3~8점) / 5점 이하 -> low rank, 6점 이상 -> high rank
-		
-		- Data Reduction : EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거
-		
-	(b). Model & Algorithms
-	
-		- Logistic Regression, RandomForest, LightGBM
-		
-		  --> 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인
-		  
-	(c). Report & Review
-	
-		- 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인
-		
-		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득
-		
-		- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)</p>
+(a). Data Preprocessing
+
+	- EDA (독립변수 correlation plot, histogram, boxplot)
+
+	- 반응 변수 그룹화 : (와인품질 3~8점) / 5점 이하 -> low rank, 6점 이상 -> high rank
+
+	- Data Reduction : EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거
+
+(b). Model & Algorithms
+
+	- Logistic Regression, RandomForest, LightGBM
+
+	  --> 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인
+
+(c). Report & Review
+
+	- 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인
+
+	- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득
+
+	- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)
 		
 *보러가기: [와인 품질 분류](https://github.com/bluemumin/wine_quality_classfication)*
