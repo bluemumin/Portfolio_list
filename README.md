@@ -9,15 +9,16 @@ Portfolio_list
 
 - 사용언어 / 핵심 라이브러리 : 
 
-Python(3.8) / Pandas, LightGBM
+	- Python(3.8) / Pandas, LightGBM
 
 - 목적 & 데이터 수집(제공)
 
- (a) OTT 플랫폼의 신규 구독자의 3주간 시청 기록 활용, 가입 후 1개월 뒤 재구독 여부를 사전 분류함.
- 
- (b) [그룹사 경진대회 데이터 제공] (데이터 외부 유출 금지 -> 미 업로드, 관련 결과 삭제)
+	 - 목적 : OTT 플랫폼의 신규 구독자의 3주간 시청 기록 활용, 가입 후 1개월 뒤 재구독 여부를 사전 분류함.
+
+	 - 데이터 : [그룹사 경진대회 데이터 제공] (데이터 외부 유출 금지 -> 미 업로드, 관련 결과 삭제)
 
 - Summary
+
  (a). Data Preprocessing
  
 	- EDA : 고객 결제 사항 + 시청 기록 데이터
@@ -29,6 +30,7 @@ Python(3.8) / Pandas, LightGBM
 	- Data Reduction : 유저별 과도한 컨텐츠 시청 수, 최신 컨텐츠 과다 시청 수 절삭
 	
  (b). Model & Algorithms
+ 
 	- LightGBM 1차, 2차 수행 --> 최적의 parameter 확인(gridsearch + 5-fold) --> 최적의 threshold 확인(5-fold)
 	
 	- Xgboost, Randomforest 모델링 후, ensemble 수행 --> 예측률 저하로 최종 제외
