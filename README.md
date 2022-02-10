@@ -23,6 +23,8 @@ Portfolio_list
 
 - Summary
 
+<br/>
+
  (a). Data Preprocessing
  
 	- EDA : 고객 결제 사항 + 시청 기록 데이터
@@ -72,6 +74,8 @@ Portfolio_list
 
 - Summary
 
+<br/>
+
  (a). Data Preprocessing
  
 	- 데이터 도메인 공부 : SMILES CODE 공부, 분자구조 벡터화 방식, 약물 성분 컬럼 내용
@@ -114,6 +118,8 @@ Portfolio_list
 <br/>
 
 - Summary
+
+<br/>
 
  (a). Data Preprocessing
  
@@ -160,16 +166,19 @@ Portfolio_list
 <br/>
 
 - 목적 & 데이터 수집(제공)
-- 
+
 	- 목적 : 텔레마케팅 성과 확인 및 개선을 위해, 고객 개인정보 및 전화 시간등을 활용하여 신규 정기예금의 가입 여부를 분류
-	- 
+	
 	- 데이터 : [Kaggle 데이터] 포르투갈 은행 텔레 마케팅 성과 자료
 
 <br/>
 
 - Summary
 
-	(a). Data Preprocessing <br/>
+<br/>
+
+	(a). Data Preprocessing
+	
 		- EDA : 고객 개인 정보, 텔레마케팅 기록
 		
 		- 시각화 : 독립변수 & 반응변수 누적 바 그래프, 핵심변수 histogram, boxplot
@@ -198,23 +207,43 @@ Portfolio_list
 <h2>[#5. Toy Project - 와인 품질 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리
- <p> Python / Pandas, matplotlib, seaborn, sklearn, LightGBM  </p>
+
+	- Python / Pandas, matplotlib, seaborn, sklearn, LightGBM
+
+<br/>
 
 - 목적 & 데이터 수집(제공)
- <p> - 와인 생산 중 더 좋은 품질의 와인을 생산하기 위해, 와인 성분 데이터로 와인의 품질 점수를 분류함</br>
-     - [Kaggle 데이터] 레드 와인 성분 + 와인 품질 </p>
-     
+
+	- 목적 : 와인 생산 중 더 좋은 품질의 와인을 생산하기 위해, 와인 성분 데이터로 와인의 품질 점수를 분류함
+	
+	- 데이터 : [Kaggle 데이터] 레드 와인 성분 + 와인 품질
+    
+<br/>
+
 - Summary
-	<p>(1). Data Preprocessing <br/>
-		- EDA (독립변수 correlation plot, histogram, boxplot) <br/>
-	        - 반응 변수 그룹화 : (와인품질 3~8점) / 5점 이하 -> low rank, 6점 이상 -> high rank <br/>
-		- Data Reduction : EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거</p>
-	<p>(2). Model & Algorithms <br/>
-		- Logistic Regression, RandomForest, LightGBM <br/>
-		  --> 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 </p>
-	<p>(3). Report & Review <br/>
-		- 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인 <br/>
-		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득 <br/>
+
+<br/>
+
+	(a). Data Preprocessing
+	
+		- EDA (독립변수 correlation plot, histogram, boxplot)
+		
+	        - 반응 변수 그룹화 : (와인품질 3~8점) / 5점 이하 -> low rank, 6점 이상 -> high rank
+		
+		- Data Reduction : EDA 시각화 이후, 각 변수의 상위 5%의 이상치 값 제거
+		
+	(b). Model & Algorithms
+	
+		- Logistic Regression, RandomForest, LightGBM
+		
+		  --> 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인
+		  
+	(c). Report & Review
+	
+		- 기본 버전 및 paramter 개선을 통해 정확도, auc 개선 사항 확인
+		
+		- 전반적인 머신러닝 flow 학습 및 파이썬 기초 코딩 능력 습득
+		
 		- 피드백 : 반응변수(와인 품질)에 대한 개선 방안 미 제시(ex - 변수 importance를 통한 변수 중요도 미 제시)</p>
 		
 *보러가기: [와인 품질 분류](https://github.com/bluemumin/wine_quality_classfication)*
