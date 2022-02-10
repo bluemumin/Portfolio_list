@@ -7,29 +7,44 @@ Portfolio_list
 ***
 <h2>[#1. Competition - OTT 플랫폼 재구독 여부 분류] </h2> 
 
-- 사용언어 / 핵심 라이브러리
- <p> Python(3.8) / Pandas, LightGBM </p>
+- 사용언어 / 핵심 라이브러리 : 
+
+Python(3.8) / Pandas, LightGBM
 
 - 목적 & 데이터 수집(제공)
- <p> - OTT 플랫폼의 신규 구독자의 3주간 시청 기록 활용, 가입 후 1개월 뒤 재구독 여부를 사전 분류함. <br/>
-     - [그룹사 경진대회 데이터 제공] (데이터 외부 유출 금지 -> 미 업로드, 관련 결과 삭제) </p>
+
+ (a) OTT 플랫폼의 신규 구독자의 3주간 시청 기록 활용, 가입 후 1개월 뒤 재구독 여부를 사전 분류함.
+ 
+ (b) [그룹사 경진대회 데이터 제공] (데이터 외부 유출 금지 -> 미 업로드, 관련 결과 삭제)
 
 - Summary
-	<p>(1). Data Preprocessing <br/>
-		- EDA : 고객 결제 사항 + 시청 기록 데이터 <br/>
-	        - 변수 내 항목 간소화 : 결제 코드, 결제 등록 기기, 컨텐츠별 시청 기기 <br/>
-		- 파생변수 생성 : 최신 컨텐츠 시청 기간 그룹화, 유저 컨텐츠 시청 퍼센트, 결제 후, 마지막 시청일자 gap 계산 <br/>
-		- Data Reduction : 유저별 과도한 컨텐츠 시청 수, 최신 컨텐츠 과다 시청 수 절삭</p>
-	<p>(2). Model & Algorithms <br/>
-		- LightGBM 1차, 2차 수행 --> 최적의 parameter 확인(gridsearch + 5-fold) --> 최적의 threshold 확인(5-fold)  <br/>
-		- Xgboost, Randomforest 모델링 후, ensemble 수행 --> 예측률 저하로 최종 제외 <br/>
-	<p>(3). Report & Review <br/>
-	        - 최종 등수 : 27등/248팀 (1등과 f1-score 0.01 차이) <br/>
-		- 긍정적 사항 : 유저의 컨텐츠 시청 퍼센트(시청 시간/컨텐츠 길이) 파생 변수 생성으로 모델 성능 향상 <br/>
-	        - 피드백 : 결제 후, 마지막 시청일자 gap 파생변수 영향도 << 주차별 시청 시간 증가/감소 여부 <br/>
-		- Futher Research : 해당 주차 드라마/영화 순위(외부 데이터) 활용한 인기 콘텐츠 선호도, <br/>
-		&nbsp;+ (ott내 영화 추가 구매 여부, 코인 추가 거래 내역 등) 플랫폼 적극적 이용 수치 인사이트 개발 가능 예상 </p>
-		
+ (a). Data Preprocessing
+ 
+	- EDA : 고객 결제 사항 + 시청 기록 데이터
+	
+	- 변수 내 항목 간소화 : 결제 코드, 결제 등록 기기, 컨텐츠별 시청 기기
+	
+	- 파생변수 생성 : 최신 컨텐츠 시청 기간 그룹화, 유저 컨텐츠 시청 퍼센트, 결제 후, 마지막 시청일자 gap 계산
+	
+	- Data Reduction : 유저별 과도한 컨텐츠 시청 수, 최신 컨텐츠 과다 시청 수 절삭
+	
+ (b). Model & Algorithms
+	- LightGBM 1차, 2차 수행 --> 최적의 parameter 확인(gridsearch + 5-fold) --> 최적의 threshold 확인(5-fold)
+	
+	- Xgboost, Randomforest 모델링 후, ensemble 수행 --> 예측률 저하로 최종 제외
+	
+ (c). Report & Review
+ 
+	- 최종 등수 : 27등/248팀 (1등과 f1-score 0.01 차이)
+	
+	- 긍정적 사항 : 유저의 컨텐츠 시청 퍼센트(시청 시간/컨텐츠 길이) 파생 변수 생성으로 모델 성능 향상
+	
+	- 피드백 : 결제 후, 마지막 시청일자 gap 파생변수 영향도 << 주차별 시청 시간 증가/감소 여부
+	
+	- Futher Research : 해당 주차 드라마/영화 순위(외부 데이터) 활용한 인기 콘텐츠 선호도, 
+	
+	&nbsp;+ (ott내 영화 추가 구매 여부, 코인 추가 거래 내역 등) 플랫폼 적극적 이용 수치 인사이트 개발 가능 예상
+			
 *보러가기: [ott 재구독 여부 분류](https://github.com/bluemumin/ott_subscription_exit_rate)*
 		
 ***
