@@ -24,7 +24,7 @@ Portfolio_list
 		- LightGBM 1차, 2차 수행 --> 최적의 parameter 확인(gridsearch + 5-fold) --> 최적의 threshold 확인(5-fold)  <br/>
 		- Xgboost, Randomforest 모델링 후, ensemble 수행 --> 예측률 저하로 최종 제외 <br/>
 	<p>(3). Report & Review <br/>
-	        - 최종 등수 : 27/248(팀) 기록 (1등과 f1-score 0.01 차이) <br/>
+	        - ** 최종 등수 : 27등/248팀 ** (1등과 f1-score 0.01 차이) <br/>
 		- 긍정적 사항 : 유저의 컨텐츠 시청 퍼센트(시청 시간/컨텐츠 길이) 파생 변수 생성으로 모델 성능 향상 <br/>
 	        - 피드백 : 결제 후, 마지막 시청일자 gap 파생변수 영향도 << 주차별 시청 시간 증가/감소 여부 <br/>
 		- Futher Research : 해당 주차 드라마/영화 순위(외부 데이터) 활용한 인기 콘텐츠 선호도, <br/>
@@ -50,7 +50,7 @@ Portfolio_list
 		- LightGBM --> 10-fold + parameter 추가 설정 <br/>
 		- 모델 성능 검증 --> binary cross entropy 대신 f1_score 함수 구현 후 LightGBM 성능 개선에 사용</p>
 	<p>(3). Report & Review <br/>
-		- 최종 등수 : 2등/ <br/>
+		- ** 최종 등수 : 2등/97팀 ** <br/>
 		- 긍정적 사항 : 단일 LGBM 구조로, 앙상블 활용 수상작들과 f1_score가 차이 없는 모델 구현 <br/>
 		- + 관련 도메인 없지만 충분한 리서치 후, 관련 라이브러리를 활용한 파생 변수 생성 <br/>
 		- 피드백 : 데이터 부족 -> overfitting 상태 미 해결로 대회 종료 </p>
@@ -77,7 +77,7 @@ Portfolio_list
 		- xgboost Regressor, Linear Regression --> parameter 미설정 후, 메인 모델링 비교용으로 활용<br/>
 		- 이전 2개년 결과 --> 누적 데이터 감소에 따른 영향 확인 및, 연도별 MAE 일정 여부 확인 </p>
 	<p>(3). Report & Review <br/>
-		- 최종 등수 : 모델링 18/93위 기록 / 시각화 1등 기록 <br/>
+		- 최종 등수 : 모델링 18/93위 기록 / ** 시각화 1등 ** 기록 <br/>
 		- MAE 0.09로 타자의 OPS 성적을 1할 미만으로 예측하는 모델 구현 (cf 예측변수 평균 범위 0.55~1.1) <br/>
 		- 긍정적 사항 : 데이터 크롤링, EDA, 모델링까지 전체 process 단독 구현</br>
 		- 피드백 : 직전 시즌 기록만이 아닌 더 이전 시즌의 기록, 누적 성적들도 활용 가능 했음<br/>
