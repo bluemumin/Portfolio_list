@@ -78,7 +78,7 @@ Portfolio_list
 	
  (c). Report & Review
  
-	- 최종 등수 : **2등**/97팀
+	- 최종 등수 : 2등/97팀
 	
 	- 긍정적 사항 : 단일 LGBM 구조로, 앙상블 활용 수상작들과 f1_score가 차이 없는 모델 구현
 	
@@ -92,27 +92,43 @@ Portfolio_list
 <h2>[#3. Competition, Toy project - 야구 타자 OPS 예측] </h2> 
 
 - 사용언어 / 핵심 라이브러리
- <p> Python / Pandas, matplotlib, seaborn, plotly, BeautifulSoup, sklearn </p>
+
+	  - Python / Pandas, matplotlib, seaborn, plotly, BeautifulSoup, sklearn
 
 - 목적 & 데이터 수집(제공)
- <p> - 현 시즌 타자 성적 기반, 다음 시즌의 타자들의 OPS(타자의 대표적 타격 지표) 성적 예측 </br>
-     - [웹 페이지(사이트 명 : 스탯티즈) 크롤링] --> 현역 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등) </p>
+
+ 	  - 목적 : 현 시즌 타자 성적 기반, 다음 시즌의 타자들의 OPS(타자의 대표적 타격 지표) 성적 예측
+ 	  - 데이터 : [웹 페이지(사이트 명 : 스탯티즈) 크롤링] --> 현역 선수 연도별 타격 성적 + 개인 정보(나이, 연봉 등)
 
 - Summary
-	<p>(1). Data Preprocessing <br/>
-		- EDA : 변수간 heatmap & 반응변수와의 barplot, boxplot & barplot, histogram & dot graph <br/>
-		- 목적, 파생변수 생성 : 다음 시즌 OPS --> 반응변수 / 행운의 안타, 타자 속도 계수, 평균대비 기여율, 공 반발계수, 누적 연차 등<br/>
-		- Data Reduction & 변수 그룹화 : 작은 타석수로 과도 or 과소로 나온 값 절단, 타석 위치 & 포지션 통합 </p>
-	<p>(2). Model & Algorithms <br/>
-		- RandomForestRegressor --> GridSearch 사용 후 MAE 계산 <br/>
-		- xgboost Regressor, Linear Regression --> parameter 미설정 후, 메인 모델링 비교용으로 활용<br/>
-		- 이전 2개년 결과 --> 누적 데이터 감소에 따른 영향 확인 및, 연도별 MAE 일정 여부 확인 </p>
-	<p>(3). Report & Review <br/>
-		- 최종 등수 : 모델링 18/93위 기록 / 시각화 1등 기록 <br/>
-		- MAE 0.09로 타자의 OPS 성적을 1할 미만으로 예측하는 모델 구현 (cf 예측변수 평균 범위 0.55~1.1) <br/>
-		- 긍정적 사항 : 데이터 크롤링, EDA, 모델링까지 전체 process 단독 구현</br>
-		- 피드백 : 직전 시즌 기록만이 아닌 더 이전 시즌의 기록, 누적 성적들도 활용 가능 했음<br/>
-		- Futher Research : 이전 기록이 없는 신규 타자 --> 고등,대학 리그의 데이터 보유시, 추가 모델 구현 가능 </p>
+
+ (a). Data Preprocessing
+ 
+	- EDA : 변수간 heatmap & 반응변수와의 barplot, boxplot & barplot, histogram & dot graph
+	
+	- 목적, 파생변수 생성 : 다음 시즌 OPS --> 반응변수 / 행운의 안타, 타자 속도 계수, 평균대비 기여율, 공 반발계수, 누적 연차 등
+	
+	- Data Reduction & 변수 그룹화 : 작은 타석수로 과도 or 과소로 나온 값 절단, 타석 위치 & 포지션 통합
+	
+ (b). Model & Algorithms
+ 
+	- RandomForestRegressor --> GridSearch 사용 후 MAE 계산
+	
+	- xgboost Regressor, Linear Regression --> parameter 미설정 후, 메인 모델링 비교용으로 활용
+	
+	- 이전 2개년 결과 --> 누적 데이터 감소에 따른 영향 확인 및, 연도별 MAE 일정 여부 확인
+	
+ (c). Report & Review
+ 
+	- 최종 등수 : 모델링 18/93위 기록 / 시각화 1등 기록
+	
+	- MAE 0.09로 타자의 OPS 성적을 1할 미만으로 예측하는 모델 구현 (cf 예측변수 평균 범위 0.55 ~ 1.1)
+	
+	- 긍정적 사항 : 데이터 크롤링, EDA, 모델링까지 전체 process 단독 구현
+	
+	- 피드백 : 직전 시즌 기록만이 아닌 더 이전 시즌의 기록, 누적 성적들도 활용 가능 했음
+	
+	- Futher Research : 이전 기록이 없는 신규 타자 --> 고등,대학 리그의 데이터 보유시, 추가 모델 구현 가능
 		
 *보러가기: [야구 타자 OPS 예측](https://github.com/bluemumin/baseball_ops_predict)*
 		
