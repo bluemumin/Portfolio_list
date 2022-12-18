@@ -28,33 +28,35 @@ Portfolio_list
 
  (a). Data Preprocessing
  
-	- EDA : 
+	- EDA : train 데이터 간 중복 여부 확인 완료, 사용 문장 현황 확인 완료
 	
-	- 변수 내 항목 간소화 : 
+	- Data Reduction : 특수 문자, 불용어 제거
 	
-	- 파생변수 생성 : 
+	- 명사 추출 : Konlpy 패키지 중 koroman 사용 (비교대상 : kkma) 
 	
-	- Data Reduction : 
+	- 사용 시도 : 맞춤법 교정, 띄어쓰기 교정 등 사용 (--> 시간 대비 개선 사항 없어서 미 사용)
 	
  (b). Model & Algorithms
  
-	- L
+	- LSTM 기반 대/중/소 분류 각각 모델 사용 (비교 대상 : bi-lstm, bn & cnn-lstm)
 	
-	- X
+	- 사용 시도1 : 소분류 oversampling, 이전 분류와 동일할 경우 선택(RuleBase 추가), 추가 데이터 사용(한국표준산업분류), 
+	
+	             중복 데이터 제거, class_weight 부여
+		 
+	- 사용 시도2 : Bert 모델 사용
 	
  (c). Report & Review
  
 	- 최종 등수 : (58등/395팀) / accuracy : 88.57% / F1-score : 0.765
 	
-	- 긍정적 사항 : 유
+	- 긍정적 사항 : Bert 모델 사용 시도 및 NLP 모델 생성을 위한 다양한 시도 수행
+	
+	               자연어 전처리를 위한 패키지 사용 및 비교 과정을 통한 과정 수행 기록
 	
 	- 피드백 : label이 많을 경우에 대한 예측 방식 search 필요, 
 	
 	          Sequential 모델 제외한 다른 모델 습득 기회 필요, Bert 모델 기본 사용 가능 → 응용 방법 습득 필요
-	
-	- Futher Research : 
-	
-	  + 
 			
 *보러가기: [자연어 기반 인공지능 산업분류 자동화](https://github.com/bluemumin/stat_data_ai_app_contest)*
 
