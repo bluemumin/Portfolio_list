@@ -3,9 +3,63 @@ Portfolio_list
 머신러닝, 딥러닝 프로젝트 포트폴리오 정리
 
 (참여항목이 없을 경우, 전체 단독 제작 입니다.)
+***
+<h2>[#1. Competition - 자연어 기반 인공지능 산업분류 자동화] </h2> 
+
+- 사용언어 / 핵심 라이브러리 : 
+
+	- Python(3.9) / Konlpy(komoran), keras(Sequential 기반 LSTM)
+
+<br/>
+
+- 목적 & 데이터 수집(제공)
+
+	- 목적 : 통계청에서의 대/중/소 산업분류를 NLP 기반으로 자동화 할 수 있는 예측 모델 생성
+
+	- 데이터 : [대회 데이터 제공] 산업분류 구분 및 예시 문장 / 세부 분류 코드 구분 항목 
+	  
+	  (데이터 외부 유출 금지 -> 미 업로드, 관련 결과 삭제)
+
+<br/>
+
+- Summary
+
+<br/>
+
+ (a). Data Preprocessing
+ 
+	- EDA : 
+	
+	- 변수 내 항목 간소화 : 
+	
+	- 파생변수 생성 : 
+	
+	- Data Reduction : 
+	
+ (b). Model & Algorithms
+ 
+	- L
+	
+	- X
+	
+ (c). Report & Review
+ 
+	- 최종 등수 : (58등/395팀) / accuracy : 88.57% / F1-score : 0.765
+	
+	- 긍정적 사항 : 유
+	
+	- 피드백 : label이 많을 경우에 대한 예측 방식 search 필요, 
+	
+	          Sequential 모델 제외한 다른 모델 습득 기회 필요, Bert 모델 기본 사용 가능 → 응용 방법 습득 필요
+	
+	- Futher Research : 
+	
+	  + 
+			
+*보러가기: [자연어 기반 인공지능 산업분류 자동화](https://github.com/bluemumin/stat_data_ai_app_contest)*
 
 ***
-<h2>[#1. Competition - OTT 플랫폼 재구독 여부 분류] </h2> 
+<h2>[#2. Competition - OTT 플랫폼 재구독 여부 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리 : 
 
@@ -56,7 +110,7 @@ Portfolio_list
 *보러가기: [ott 재구독 여부 분류](https://github.com/bluemumin/ott_subscription_exit_rate)*
 
 ***
-<h2>[#2. Competition - 약물 독성 분류] </h2> 
+<h2>[#3. Competition - 약물 독성 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리
 
@@ -101,7 +155,7 @@ Portfolio_list
 *보러가기: [약물 독성 분류](https://github.com/bluemumin/smiles_toxicity)*
 		
 ***
-<h2>[#3. Competition, Toy project - 야구 타자 OPS 예측] </h2> 
+<h2>[#4. Competition, Toy project - 야구 타자 OPS 예측] </h2> 
 
 - 사용언어 / 핵심 라이브러리
 
@@ -152,7 +206,7 @@ Portfolio_list
 *보러가기: [야구 타자 OPS 예측](https://github.com/bluemumin/baseball_ops_predict)*
 		
 ***
-<h2>[#4. Toy Project - 텔레마케팅 후, 정기예금 가입 여부 분류] </h2> 
+<h2>[#5. Toy Project - 텔레마케팅 후, 정기예금 가입 여부 분류] </h2> 
 
 - Member
 
@@ -204,7 +258,7 @@ Portfolio_list
 *보러가기: [텔레마케팅 통한 정기예금 가입 여부 분류](https://github.com/bluemumin/telemarketing_to_deposit_with_R)*
 		
 ***
-<h2>[#5. Toy Project - 와인 품질 분류] </h2> 
+<h2>[#6. Toy Project - 와인 품질 분류] </h2> 
 
 - 사용언어 / 핵심 라이브러리
 
